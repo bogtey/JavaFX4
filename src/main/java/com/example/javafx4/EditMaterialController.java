@@ -44,7 +44,6 @@ public class EditMaterialController {
 
     @FXML
     public void initialize() {
-        // Инициализация спиннеров с диапазоном и возможность ручного ввода
         editquantityid.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
         editcostid.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
         editspinerMinQuantity.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
