@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx4.AddMaterialController">
+   <children>
+      <TextField fx:id="typeid" layoutX="137.0" layoutY="110.0" />
+      <TextField fx:id="nameid" layoutX="137.0" layoutY="160.0" />
+      <Spinner fx:id="quantityid" layoutX="315.0" layoutY="110.0" />
+      <Spinner fx:id="costid" layoutX="315.0" layoutY="160.0" />
+      <Spinner fx:id="spinerMinQuantity" layoutX="226.0" layoutY="215.0" />
+      <Button fx:id="addBtn" layoutX="226.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Добавить" />
+      <Label layoutX="198.0" layoutY="93.0" text="Тип" />
+      <Label layoutX="199.0" layoutY="192.0" text="Минимальное количество на складе" />
+      <Label layoutX="376.0" layoutY="142.0" text="Цена" />
+      <Button fx:id="backBtn" layoutX="315.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Назад" />
+      <Label layoutX="358.0" layoutY="93.0" text="Количество" />
+      <Label layoutX="185.0" layoutY="142.0" text="Название" />
+      <Pane layoutX="-6.0" prefHeight="37.0" prefWidth="606.0" style="-fx-background-color: red;">
+         <children>
+            <Text layoutX="197.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Внесение материала">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
