@@ -100,7 +100,6 @@ public class HelloController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafx4/editmaterial.fxml"));
             Parent root = loader.load();
 
-            // Получаем контроллер редактирования и передаём выбранный материал
             EditMaterialController editController = loader.getController();
             editController.setMaterial(material);
 
