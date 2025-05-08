@@ -50,7 +50,6 @@ public class AddMaterialController {
 
     @FXML
     void initialize() {
-        // Установка значений по умолчанию для Spinner
         quantityid.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
         costid.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
         spinerMinQuantity.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100000, 0));
@@ -65,15 +64,13 @@ public class AddMaterialController {
         String type = typeid.getText();
         String name = nameid.getText();
 
-        // Получение значений из Spinner с проверкой на null
         Integer quantity = quantityid.getValue();
         Integer cost = costid.getValue();
         Integer minQuantity = spinerMinQuantity.getValue();
 
-        // Проверка на null
         if (type.isEmpty() || name.isEmpty() || quantity == null || cost == null || minQuantity == null) {
             System.out.println("Пожалуйста, заполните все поля.");
-            return; // Выход из метода, если есть пустые поля
+            return;
         }
 
         String sql = "INSERT INTO materials (type, name, quantity, cost, minimalquantity) VALUES (?, ?, ?, ?, ?)";
@@ -90,7 +87,6 @@ public class AddMaterialController {
             pstmt.executeUpdate();
             System.out.println("Материал добавлен успешно!");
 
-            // Очистка полей после добавления
             clearFields();
 
         } catch (SQLException e) {
